@@ -12,11 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('/login');
+    return redirect('/login');
 });
 
 Route::middleware('auth')->group(function () {
-
     Route::get('/chat', 'ChatController@index');
 
 });
